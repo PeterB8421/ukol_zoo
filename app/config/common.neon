@@ -25,6 +25,7 @@ database:
 
 services:
 	- App\Model\UserManager
+	- App\Model\ZooManager
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory

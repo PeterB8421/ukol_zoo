@@ -1,5 +1,19 @@
 {block content}
-
+<table class="table table-bordered">
+    <thead>
+        <tr class="table-primary">
+            <th><a n:href="Zoo:default 'summary'">Název akce</a></th><th><a n:href="Zoo:default 'date'">Konání</a></th><th><a n:href="Zoo:default 'type'">Typ akce</a></th><th><a n:href="Zoo:default 'visitors'">Počet návštěvníků</a></th><th>Operace</th>
+        </tr>
+    </thead>
+    <tbody>
+        {foreach $events as $event}
+            <tr>
+                <td><a n:href="Zoo:detail $event->id">{$event->summary}</a></td><td>{$event->date|date: 'j. n. Y'} {$event->time->format('%H:%I')}</td><td>{$event->type}</td><td>{$event->visitors}</td><td><a href="#" class="btn btn-primary btn-sm">Změnit</a> <a href="#" class="btn btn-danger btn-sm">Smazat</a></td>
+            </tr>
+        {/foreach}
+    </tbody>
+</table>
+<a href="#" class="btn btn-success btn-sm">Přidat novou akci</a>
 {/block}
 
 {block scripts}

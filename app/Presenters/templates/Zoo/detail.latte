@@ -1,0 +1,26 @@
+{block content}
+    <div class="row">
+        <div class="col-xs-12 col-md-6" id="vlevo">
+            <h2 class="text-center">{$event->summary}</h2>
+            <div id="detaily">{$event->description}<br><br>
+                <ul>
+                    <li>Typ akce: <b>{$event->type|upper}</b></li>
+                    <li>Konání akce: <b>{$event->date|date}, {$event->time->format('%H:%I')} hod.</b></li>
+                    <li>Počet účastníků: <b>{$event->visitors}</b></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <img class="img-responsive" src="{$basePath}/images/mapa.jpg">
+            <p>Orientační plán ZOO Praha</p>
+        </div>
+    </div>
+    <a n:href="Zoo:default" class="btn btn-primary">&lt;&lt; Zpět</a>
+{/block}
+
+{block scripts}
+{include parent}
+{/block}
+
+{block head}
+{/block}

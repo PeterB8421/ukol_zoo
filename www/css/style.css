@@ -13,6 +13,7 @@ header{
 	color: white;
 	padding-top: 20px;
 	padding-bottom: 50px;
+	margin-bottom: 20px;
 }
 
 footer{
@@ -22,8 +23,26 @@ footer{
 	background: #ddd;
 }
 
+h2{
+	color: green;
+	background-color: #99ff99;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+}
+
 #nadpis{
 	position: relative;
 	top: 40px;
 	left: 10px;
+}
+
+#detaily{
+	border: solid 1px lightgray;
+	padding: 10px;
+}
+
+#vlevo{
+	box-sizing: border-box;
 }
