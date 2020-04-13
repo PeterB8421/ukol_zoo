@@ -38,4 +38,16 @@ final class ZooManager
 	public function getByID($id){
 		return $this->database->table(self::TABLE_NAME)->get($id);
 	}
+
+	public function create($data){
+		$this->database->table(self::TABLE_NAME)->insert($data);
+	}
+
+	public function update($id, $data){
+		$this->database->table(self::TABLE_NAME)->where("id", $id)->update($data);
+	}
+
+	public function delete($id){
+		$this->database->table(self::TABLE_NAME)->where("id", $id)->delete();
+	}
 }

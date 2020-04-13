@@ -1,3 +1,7 @@
+body{
+	height: 100%;
+}
+
 a[href^="#error:"] {
 	background: red;
 	color: white;
@@ -16,20 +20,41 @@ header{
 	margin-bottom: 20px;
 }
 
+.conatainer:after{
+	content: "";
+	display: block;
+}
+
+footer, .conatainer:after{
+	content: "";
+	height: 50px;
+}
+
 footer{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 	background: #ddd;
 }
 
-h2{
+.detail{
 	color: green;
 	background-color: #99ff99;
 	padding-top: 10px;
 	padding-right: 30px;
 	padding-bottom: 10px;
 	padding-left: 30px;
+}
+
+.bg-warning{
+	padding: 10px;
+}
+
+.conatainer{
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.conatainer:after{
+	content: "";
+	display: block;
 }
 
 #nadpis{
@@ -43,6 +68,6 @@ h2{
 	padding: 10px;
 }
 
-#vlevo{
-	box-sizing: border-box;
+#mapa{
+	width: 100%;
 }
